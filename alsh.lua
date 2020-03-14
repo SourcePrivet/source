@@ -10401,7 +10401,6 @@ rami = '\n*🍃¦ اهلا عزيزي المطور *\nٴ━━━━━━━━
 '\n*📬¦* الايدي » ❪`'..data.id_..'`❫'..
 '\n*⚜¦* الاسم » ❪'..link..'❫'..
 '\n*💠¦* تم مسح بيانات المجموعه وتم ازالتها من المجموعات\n💥'
-'\n*💠¦* soure corona @visa4bin\n💥'  
 alsh_sendMsg(SUDO,0, 1,rami, 1, "md")  end,nil)
 elseif data.channel_.status_.ID == "ChatMemberStatusMember" then   
 print('\27[30;32m»» THE BOT IS NOT ADMIEN ↓\n»» '..'-100'..data.channel_.id_..'\n\27[1;37m')

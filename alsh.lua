@@ -141,7 +141,7 @@ SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 SUDOUSERNAME = sudos.USERNAME
 DEVRMBO = sudos.token:match("(%d+)")  
-NAMEBOT = (devalsh:get(DEVRMBO..'alsh:name') or 'dhurgham')
+NAMEBOT = (devalsh:get(DEVRMBO..'alsh:name') or '@visa4bin')
 bot_id = sudos.token:match("(%d+)")  
 chaneel = sudos.token 
 plugins = {}
@@ -992,7 +992,7 @@ if not is_devrami(msg) then
 alsh_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦ هاذا الامر خاص بالمطور الاساسي *\n', 1, 'md') 
 return false
 end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/SourceCorona/alshX/master/getfile.json")
+local Get_Files, res = https.request("https://github.com/SourcePrivet/source/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 if Get_info then
@@ -1027,7 +1027,7 @@ t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تعطيله وحذفه ب�
 else
 t = "*📬¦ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/SourceCorona/alshX/master/plugins_/"..file)
+local json_file, res = https.request("https://github.com/SourcePrivet/source/master/plugins_/"..file)
 if res == 200 then
 os.execute("rm -fr plugins_/"..file)
 alsh_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
@@ -1047,7 +1047,7 @@ t = "*📬¦ بالتاكيد تم تنزيل وتفعيل ملف » {"..file.."
 else
 t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تنزيله وتفعيله بنجاح \n💥*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/SourceCorona/alshX/master/plugins_/"..file)
+local json_file, res = https.request("https://github.com/SourcePrivet/source/master/plugins_/"..file)
 if res == 200 then
 local chek = io.open("plugins_/"..file,'w+')
 chek:write(json_file)
@@ -2129,8 +2129,8 @@ if text ==('المجموعات 📇') and is_devrami(msg) then    local list = d
 if text == "تحديث السورس 🔱" and is_devrami(msg) then  alsh_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf alsh.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute('wget https://raw.githubusercontent.com/SourceCorona/alsh/master/alsh.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/SourceCorona/alsh/master/plugins_/help_rep.lua') 
+os.execute('wget https://github.com/SourcePrivet/source/master/alsh.lua') 
+os.execute('cd plugins_;wget https://github.com/SourcePrivet/source/master/plugins_/help_rep.lua') 
 sleep(0.5) 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('alsh.lua')  
@@ -4336,8 +4336,8 @@ if text == "تحديث السورس" and is_devrami(msg) then
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf alsh.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute('wget https://raw.githubusercontent.com/SourceCorona/alsh/master/alsh.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/SourceCorona/alsh/master/plugins_/help_rep.lua') 
+os.execute('wget https://github.com/SourcePrivet/source/master/alsh.lua') 
+os.execute('cd plugins_;wget https://github.com/SourcePrivet/source/master/plugins_/help_rep.lua') 
 sleep(0.5) 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, '🚸*¦* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('alsh.lua')  
@@ -4409,7 +4409,7 @@ return false  end
 if kk.id_ then  
 local msgss = tonumber(devalsh:get(DEVRMBO..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)  
 if tonumber(kk.id_) == tonumber(204510771) then
-t = 'مطور السورس'
+t = 'تاج راسهم ، مطور السورس'
 elseif tonumber(kk.id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
 elseif tonumber(kk.id_) == tonumber(SUDO) then
@@ -4494,7 +4494,7 @@ if text and text:match('كشف (%d+)') then
 local iduser = text:match('كشف (%d+)')  
 local msgss = tonumber(devalsh:get(DEVRMBO..'user:messages:'..msg.chat_id_..':'..iduser) or 0)  
 if tonumber(iduser) == tonumber(204510771) then
-t = 'مطور السورس'
+t = 'تاج راسهم ، مطور السورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هاذا البوت'
 elseif tonumber(iduser) == tonumber(SUDO) then
@@ -4599,7 +4599,7 @@ if text ==("كشف") and msg.reply_to_message_id_ ~= 0 then
 function id_by_reply(extra, result, success) 
 local msgss = tonumber(devalsh:get(DEVRMBO..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)  
 if tonumber(result.sender_user_id_) == tonumber(204510771) then
-t = 'مطور السورس'
+t = 'تاج راسهم ، مطور السورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هاذا البوت'
 elseif tonumber(result.sender_user_id_) == tonumber(SUDO) then
@@ -4706,7 +4706,7 @@ function mention(extra, tes, success)
 if tes.content_.entities_[0].user_id_ then  
 local msgss = tonumber(devalsh:get(DEVRMBO..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)  
 if tonumber(tes.content_.entities_[0].user_id_) == tonumber(204510771) then
-t = 'مطور السورس'
+t = 'تاج راسهم ، مطور السورس'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(SUDO) then
@@ -4993,26 +4993,7 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[
-📮¦ اهلا بك في سورس كورونا 🍃
-ٴ━━━━━━━━━━
-🗃¦ لتنصيب السورس ↓↑
-ٴ━━━━━━━━━━
-⚜¦ افتح ترمنال جديد 
-⚜¦ انسخ رابط كيثاب السورس  ↡
-`git clone https://github.com/SourceCorona/dhurgham.git; cd dhurgham;chmod +x tg;chmod +x dhurgham.sh;chmod +x RM;./dhurgham.sh`
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-⚜¦ راح يطلب معلومات منك الاتيه ↓
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-📬¦ بعد كل امر اضغط انتر 
-⓵ ¦ يطلب » توكن البوت 
-⓶ ¦ يطلب » ايدي المطور الاساسي
-⓷ ¦ يطلب » معرف المطور الاساسي
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-📌¦ راح تلقائيا يشتغل بسكرين 
-💭¦ كود رن السورس
-`cd alsh;./RM`
-💭¦ كود حذف السورس 
-`sudo rm -fr alsh ; screen -X -S alsh quit`
+لايوجد سورس ، نعمل على البركه
 ٴ━━━━━━━━━━
 ⚜¦ للمزيد من المعلومات راسلنا
 💥¦ مطور السورس » @html_iq
@@ -9148,7 +9129,7 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
 if tonumber(msg.sender_user_id_) == tonumber(204510771) then
-t = 'مطور السورس 🔱'
+t = 'تاج راسهم ، مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي 🍃'
 elseif devalsh:sismember(DEVRMBO..'sudo:bot',msg.sender_user_id_) then
@@ -10419,7 +10400,8 @@ rami = '\n*🍃¦ اهلا عزيزي المطور *\nٴ━━━━━━━━
 '\n*🔖¦* معلومات المجموعه '..
 '\n*📬¦* الايدي » ❪`'..data.id_..'`❫'..
 '\n*⚜¦* الاسم » ❪'..link..'❫'..
-'\n*💠¦* تم مسح بيانات المجموعه وتم ازالتها من المجموعات\n💥' 
+'\n*💠¦* تم مسح بيانات المجموعه وتم ازالتها من المجموعات\n💥'
+'\n*💠¦* soure corona @visa4bin\n💥'  
 alsh_sendMsg(SUDO,0, 1,rami, 1, "md")  end,nil)
 elseif data.channel_.status_.ID == "ChatMemberStatusMember" then   
 print('\27[30;32m»» THE BOT IS NOT ADMIEN ↓\n»» '..'-100'..data.channel_.id_..'\n\27[1;37m')
@@ -10604,21 +10586,21 @@ tdcli_function ({   ID = "GetMessage", chat_id_ = data.chat_id_,   message_id_ =
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  
 local filess = io.open("plugins_/help_rep.lua","r")
 if not filess then
-os.execute('cd plugins_ ;wget https://raw.githubusercontent.com/SourceCorona/alsh/master/plugins_/help_rep.lua')
+os.execute('cd plugins_ ;wget https://github.com/SourcePrivet/source/master/plugins_/help_rep.lua')
 end
 local filess = io.open("requfiles/JSON.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/SourceCorona/alshX/master/requfiles/JSON.lua') 
+os.execute('cd requfiles ;wget https://github.com/SourcePrivet/source/master/requfiles/JSON.lua') 
 dofile('alsh.lua')  
 end
 local filess = io.open("requfiles/dkjson.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/SourceCorona/alshX/master/requfiles/dkjson.lua') 
+os.execute('cd requfiles ;wget https://github.com/SourcePrivet/source/master/requfiles/dkjson.lua') 
 dofile('alsh.lua')  
 end
 local filess = io.open("requfiles/serpent.lua","r")
 if not filess then
-os.execute('cd requfiles ;wget https://raw.githubusercontent.com/SourceCorona/alshX/master/requfiles/serpent.lua') 
+os.execute('cd requfiles ;wget https://github.com/SourcePrivet/source/master/requfiles/serpent.lua') 
 dofile('alsh.lua')  
 end
 local list = devalsh:smembers(DEVRMBO.."usersbot")

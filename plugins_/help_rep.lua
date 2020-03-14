@@ -535,6 +535,10 @@ if text =="😻😻😻😻" then
 rami =   "باع الحب صاعد عده فول 😹😻" 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
 end
+if text =="قناه" then 
+rami =   "@visa4bin" 
+alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
+end
 if text =="😻😻😻" then 
 rami =   "باع الحب صاعد عده فول 😹😻" 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
@@ -1455,8 +1459,9 @@ if text =="انكليزي" then
 rami =  "فاج يو مان 😎" 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
 end
-if text =="مرحبا" then 
-rami =   " مہٰ۪۫ږآحہٰ۪۫بہٰ۪۫ هلا بيك 💑" 
+THEMAX11
+if text =="نواف" then 
+rami =   "منو كال مصمص 😹" 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
 end
 if text =="هلاوووووو" then 
@@ -1474,6 +1479,10 @@ end
 
 if text =="اكرهك" then 
 rami =   "شعور متبادل حبي" 
+alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
+end
+if text =="سورس" then 
+rami =   "لايوجد سورس ، نعمل على البركه" 
 alsh_sendMsg(msg.chat_id_, msg.id_, 1, rami, 1, "html") 
 end
 if text =="تكرهني" then 
